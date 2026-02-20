@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap AI - Your 30-Day Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>SKILLGAP AI</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card" style="margin-bottom: 3rem; text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">Hello, {{ user.name }}!</h2>
+            <p style="font-size: 1.1rem; color: var(--text-secondary);">Your personalized 30-day challenge awaits.</p>
+
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <div class="tag match">📅 Starts: {{ user.start_date }}</div>
+                <div class="tag match">⏰ Daily Reminder: {{ user.study_time }}</div>
+            </div>
+
+            <p style="margin-top: 1rem; color: var(--success-color); font-size: 0.9rem;">
+                ✓ We'll remind you daily so you can stay consistent!
+            </p>
+        </section>
+
+        <section class="timeline">
+            <!-- Week 1 -->
+            <div class="timeline-item">
+                <h4 style="color: var(--accent-hover); font-size: 1.2rem;">Week 1 – Basics & Fundamentals</h4>
+                <p><strong>Focus:</strong> Understand the core concepts of your chosen career missing skills.</p>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Days 1-2: Watch introductory videos and read documentation.</li>
+                    <li>Days 3-5: Practice basic syntax, commands, and short exercises.</li>
+                    <li>Days 6-7: Small review quizzes and setting up the local environment.</li>
+                </ul>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="timeline-item">
+                <h4 style="color: var(--accent-hover); font-size: 1.2rem;">Week 2 – Intermediate Concepts</h4>
+                <p><strong>Focus:</strong> Deep dive into frameworks, libraries, and best practices.</p>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Days 8-10: Learn standard industry tools (e.g., Pandas for Data Science, React for Web).</li>
+                    <li>Days 11-12: Solve medium-level algorithmic or functional problems.</li>
+                    <li>Days 13-14: Build a mini feature or local component.</li>
+                </ul>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="timeline-item">
+                <h4 style="color: var(--accent-hover); font-size: 1.2rem;">Week 3 – Projects & Applications</h4>
+                <p><strong>Focus:</strong> Apply your learning by building a complete working project.</p>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Days 15-18: Plan and build Project #1 (e.g., a simple web app or data dashboard).</li>
+                    <li>Days 19-21: Debug, refine, and deploy Project #1 to a public platform like GitHub.</li>
+                </ul>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="timeline-item">
+                <h4 style="color: var(--accent-hover); font-size: 1.2rem;">Week 4 – Mock Interviews & Resume preparation
+                </h4>
+                <p><strong>Focus:</strong> Get ready for the job market and finalize your portfolio.</p>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Days 22-25: Update your resume, LinkedIn, and GitHub profile with new skills & projects.</li>
+                    <li>Days 26-28: Practice common behavioral and technical mock interview questions.</li>
+                    <li>Days 29-30: Final review and applying to the first set of jobs/internships.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="{{ url_for('resources') }}" class="btn">View Study Resources &rarr;</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillGap AI. Built for the learning community.</p>
+    </footer>
+</body>
+
+</html>

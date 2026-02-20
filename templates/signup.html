@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap AI - Set Up Study Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>SKILLGAP AI</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card form-container">
+            <h2 class="section-title">Set Up Your Study Plan</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Create a personalized 30-day study plan and get daily reminders to stay on track.
+            </p>
+
+            <form action="{{ url_for('signup') }}" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email or Phone Number</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com or +1234567890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="start_date">Study Start Date</label>
+                    <input type="date" name="start_date" id="start_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="study_time">Preferred Study Time</label>
+                    <input type="time" name="study_time" id="study_time" required>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Create My Plan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillGap AI. Built for the learning community.</p>
+    </footer>
+</body>
+
+</html>

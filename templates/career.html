@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap AI - {{ career.name }}</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>SKILLGAP AI</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('study_plan') }}">Study Plan</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <div style="margin-bottom: 2rem;">
+            <a href="{{ url_for('home') }}" class="btn btn-secondary">&larr; Back to Search</a>
+        </div>
+
+        <!-- 1. Career Overview Section -->
+        <section class="card" style="margin-bottom: 2rem;">
+            <h2 class="section-title">{{ career.name }}</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                {{ career.overview }}
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+
+                <!-- 2. Companies Hiring -->
+                <div class="card" style="background: rgba(0,0,0,0.2);">
+                    <h3 style="color: var(--accent-hover); margin-bottom: 1rem;">Top Companies Hiring</h3>
+                    <ul class="company-list">
+                        {% for company in career.companies %}
+                        <li>🏢 {{ company }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- 3. Approximate Salary -->
+                <div class="card" style="background: rgba(0,0,0,0.2);">
+                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Approximate Salary</h3>
+                    <div class="salary-box">
+                        {{ career.salary.split('|')[0] }}
+                    </div>
+                    {% if '|' in career.salary %}
+                    <div class="salary-box" style="font-size: 1rem; color: var(--text-secondary); margin-top: -0.5rem;">
+                        {{ career.salary.split('|')[1] }}
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Skill Match Analysis -->
+        {% if has_skills_entered %}
+        <section class="card">
+            <h2 class="section-title">Your Skill Analysis</h2>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0.5rem;">
+                    Match Percentage:
+                    <span
+                        style="color: {{ 'var(--success-color)' if match_percentage >= 70 else 'var(--warning-color)' if match_percentage >= 40 else 'var(--danger-color)' }}">
+                        {{ match_percentage }}%
+                    </span>
+                </h3>
+                <div class="progress-container">
+                    <div class="progress-bar"
+                        style="width: {{ match_percentage }}%; background: {{ 'linear-gradient(90deg, #10b981, #34d399)' if match_percentage >= 70 else 'linear-gradient(90deg, #f59e0b, #fbbf24)' if match_percentage >= 40 else 'linear-gradient(90deg, #ef4444, #f87171)' }}">
+                        {{ match_percentage }}%
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <!-- Required Skills Status -->
+                <div>
+                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Required Skills</h3>
+                    <div class="tags">
+                        {% for req in career.skills %}
+                        {% if req in missing_skills %}
+                        <span class="tag miss">❌ {{ req }}</span>
+                        {% else %}
+                        <span class="tag match">✅ {{ req }}</span>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Missing Skills to Learn -->
+                <div>
+                    {% if missing_skills %}
+                    <h3 style="color: var(--warning-color); margin-bottom: 1rem;">Missing Skills (To Learn)</h3>
+                    <div class="tags">
+                        {% for miss in missing_skills %}
+                        <span class="tag miss">{{ miss }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Excellent Preparation!</h3>
+                    <p style="color: var(--text-secondary);">You have all the required core skills mapped for this role.
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- 6. Two Action Buttons -->
+            <div class="btn-group">
+                <a href="{{ url_for('study_plan') }}" class="btn">Get Study Plan</a>
+                <a href="{{ url_for('resources') }}" class="btn btn-secondary">View Resources</a>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillGap AI. Built for the learning community.</p>
+    </footer>
+</body>
+
+</html>

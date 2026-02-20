@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap AI - Home</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SKILLGAP AI</h1>
+        <p>Helping students and beginners start their career journey with clarity</p>
+    </header>
+
+    <main>
+        <!-- 2. Four Feature Boxes -->
+        <section class="features-grid">
+            <div class="card feature-box">
+                <h3>Who We Help</h3>
+                <p>Helping students and beginners start their career journey with clarity</p>
+            </div>
+            <div class="card feature-box">
+                <h3>What We Do</h3>
+                <p>We analyze your skills and identify what you are missing</p>
+            </div>
+            <div class="card feature-box">
+                <h3>How It Works</h3>
+                <p>Enter your skills, choose a career and get a personalized roadmap</p>
+            </div>
+            <div class="card feature-box">
+                <h3>Features</h3>
+                <p>Skill analysis, gap detection and learning recommendation</p>
+            </div>
+        </section>
+
+        <!-- 3. Career Search Section -->
+        <section class="card form-container">
+            <h2 class="section-title">Analyze Your Career Path</h2>
+            <form action="{{ url_for('analyze') }}" method="POST">
+                
+                <div class="form-group">
+                    <label for="career_id">Target Career Goal</label>
+                    <select name="career_id" id="career_id" required>
+                        <option value="" disabled selected>Select a career...</option>
+                        <!-- Dynamic options from app.py -->
+                        {% for career in careers %}
+                        <option value="{{ career.id }}">{{ career.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Current Skills (Comma separated)</label>
+                    <input type="text" name="skills" id="skills" placeholder="e.g. Python, HTML, CSS, React" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Resume (Optional)</label>
+                    <!-- Simulated upload box as requested -->
+                    <div class="upload-box" onclick="document.getElementById('resume-upload').click()">
+                        <p>📄 Click to upload resume (Simulated file processing only)</p>
+                        <input type="file" id="resume-upload" style="display: none;">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Analyze Skills</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillGap AI. Built for the learning community.</p>
+    </footer>
+</body>
+</html>

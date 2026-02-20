@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap AI - Learning Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>SKILLGAP AI</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('study_plan') }}">Study Plan</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title" style="margin-bottom: 2rem;">Curated Learning Resources</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+            <!-- YouTube Channels -->
+            <div class="card">
+                <h3 style="color: var(--danger-color); margin-bottom: 1rem;">📺 Top YouTube Channels</h3>
+                <ul class="company-list" style="color: var(--text-secondary);">
+                    <li><a href="https://www.youtube.com/c/Freecodecamp" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">FreeCodeCamp</a> - Complete
+                        courses on almost everything</li>
+                    <li><a href="https://www.youtube.com/c/TraversyMedia" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Traversy Media</a> - Web
+                        Development & Frameworks</li>
+                    <li><a href="https://www.youtube.com/c/Coreyms" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Corey Schafer</a> - Python & Data
+                        Science</li>
+                    <li><a href="https://www.youtube.com/c/NetworkChuck" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">NetworkChuck</a> - Networking &
+                        Cyber Security</li>
+                </ul>
+            </div>
+
+            <!-- Free Courses -->
+            <div class="card">
+                <h3 style="color: var(--warning-color); margin-bottom: 1rem;">🎓 Free Platforms & Courses</h3>
+                <ul class="company-list" style="color: var(--text-secondary);">
+                    <li><a href="https://www.coursera.org/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Coursera</a> - University led
+                        fundamental courses.</li>
+                    <li><a href="https://www.edx.org/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">edX</a> - Courses from Harvard,
+                        MIT, etc.</li>
+                    <li><a href="https://cs50.harvard.edu/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">CS50 (Harvard)</a> - Best intro
+                        to computer science</li>
+                    <li><a href="https://www.theodinproject.com/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">The Odin Project</a> - Open
+                        source Web Dev curriculum</li>
+                </ul>
+            </div>
+
+            <!-- Documentation Link -->
+            <div class="card">
+                <h3 style="color: var(--success-color); margin-bottom: 1rem;">📚 Documentation Hubs</h3>
+                <ul class="company-list" style="color: var(--text-secondary);">
+                    <li><a href="https://developer.mozilla.org/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">MDN Web Docs</a> - Web tech
+                        standard docs</li>
+                    <li><a href="https://docs.python.org/3/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Python Docs</a> - Official Python
+                        documentation</li>
+                    <li><a href="https://aws.amazon.com/documentation/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">AWS Docs</a> - Cloud Architecture
+                        guides</li>
+                    <li><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Scikit-learn Guide</a> - Machine
+                        Learning library</li>
+                </ul>
+            </div>
+
+            <!-- Practice Platforms -->
+            <div class="card">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">💻 Practice & Challenges</h3>
+                <ul class="company-list" style="color: var(--text-secondary);">
+                    <li><a href="https://leetcode.com/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">LeetCode</a> - Data Structure &
+                        Algorithm practice</li>
+                    <li><a href="https://www.kaggle.com/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Kaggle</a> - Data Science & ML
+                        datasets and contests</li>
+                    <li><a href="https://hackthebox.com/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Hack The Box</a> - Cyber Security
+                        live labs</li>
+                    <li><a href="https://frontendmentor.io/" target="_blank"
+                            style="color: var(--accent-hover); text-decoration: none;">Frontend Mentor</a> - Web Dev
+                        UI/UX challenges</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillGap AI. Built for the learning community.</p>
+    </footer>
+</body>
+
+</html>
