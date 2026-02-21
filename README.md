@@ -2,27 +2,34 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [SKILLGAP AI] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [Codex]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Aiswarya Prakash] - [Loudes Matha College of Science and Technology]
+- Member 2: [Christena V Benny] - [Loudes Matha College of Science and Technology]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[http://127.0.0.1:5000]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Identify missing skills and bridge the gap to your dream career]
 
 ### The Problem statement
-[What problem are you solving?]
+[>Many students and jobseekers don't know what skills are required for a specific career
+ >Don't know what skills they are missing
+ >Feel confused about what to learn next
+ >Waste time learning random things]
 
 ### The Solution
-[How are you solving it?]
+[>career based skill mapping
+>automated skill comparison
+>match percentage calculation
+>personalized learning road map
+>structured decision support]
 
 ---
 
@@ -31,10 +38,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [HTML,Python]
+- Frameworks used: [flask framework]
+- Libraries used: [flask library]
+- Tools used: [VS Code,Git,Antigravity]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +53,10 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [study schedule]
+- Feature 2: [provide resources]
+- Feature 3: [sent notifications]
+- Feature 4: [show skill percentage]
 
 ---
 
@@ -70,10 +77,10 @@ List the key features of your project:
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+[CPU,RAM,Storage space,Internet connection,OS]
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+[no circuit setuo since it is a web application]
 
 ---
 
@@ -83,26 +90,32 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+!["C:\Users\lenovo\OneDrive\Pictures\Screenshots\Screenshot 2026-02-20 223243.png"](Add screenshot 1 here with proper name)
+*Add <img width="1708" height="908" alt="Screenshot 2026-02-20 223243" src="https://github.com/user-attachments/assets/b4b9c154-a6d1-4487-ac02-edd94041abb8" />
+caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![screenshot 2](Add screenshot 2 here with proper name)
+*Add<img width="1560" height="902" alt="Screenshot 2026-02-20 223408" src="https://github.com/user-attachments/assets/00489b45-6dac-4b71-9526-b4cd10875867" />
+ caption explaining what this shows*
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
+<img width="952" height="784" alt="Screenshot 2026-02-20 223528" src="https://github.com/user-attachments/assets/dda4d93b-2796-4a94-a1a4-39956ce6339d" />
 
 #### Diagrams
 
 **System Architecture:**
 
+
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+*Explain your system architecture - components, data flow, tech stack interaction*<img width="1024" height="1024" alt="project architecture png" src="https://github.com/user-attachments/assets/4e486c69-70f2-4d13-8313-4c14b6ba1079" />
+
 
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
 *Add caption explaining your workflow*
+<img width="1024" height="1024" alt="project workflow png" src="https://github.com/user-attachments/assets/17369cad-a46c-4500-b07e-f266a01a11e6" />
 
 ---
 
@@ -110,15 +123,16 @@ List the key features of your project:
 
 #### Schematic & Circuit
 
-![Circuit](Add your circuit diagram here)
+![no circuit diagram since it is a web application](Add your circuit diagram here)
 *Add caption explaining connections*
 
-![Schematic](Add your schematic diagram here)
+![no schematic diagram](Add your schematic diagram here)
 *Add caption explaining the schematic*
 
 #### Build Photos
 
 ![Team](Add photo of your team here)
+![photo_2026-02-20_23-25-58](https://github.com/user-attachments/assets/36ce3df6-c094-4d85-bb86-28bdf441618c)
 
 ![Components](Add photo of your components here)
 *List out all components shown*
@@ -127,7 +141,8 @@ List the key features of your project:
 *Explain the build steps*
 
 ![Final](Add photo of final product here)
-*Explain the final build*
+*Explain the<img width="1675" height="866" alt="Screenshot 2026-02-20 232955" src="https://github.com/user-attachments/assets/abf86a23-5e18-4a43-a96e-723c7571585b" />
+ final build*
 
 ---
 
@@ -400,9 +415,9 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [algorithm design]: [match percentage is calculated]
+- [design]: [created 3-tier architecture]
+- [analysis]: [defined the skill sets for 5+ modern IOT roles]
 
 ---
 
